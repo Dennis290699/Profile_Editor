@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./assets/icons/icon-bar.png">
-    <link rel="stylesheet" href="./css/styles-modal.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/style-modal.css">
 
-    <title>Profile</title>
+    <title>Profile | Edit</title>
 </head>
+
 <body>
     <div class="profile-grid">
         <div class="user-image-container">
-            <img class="user-image" src="./assets/icons/icon-user.png" alt="Imagen de usuario">
+            <img class="user-image" src="./assets/icons/icon-user.png" alt="Imagen de usuario" draggable="false">
         </div>
         <div class="user-info">
-            <div class="user-name">Nombre del Usuario</div>
+            <div class="user-name">Usuario</div>
             <button id="changeImageButton">Cambiar Imagen</button>
             <button id="changeNameButton">Cambiar Nombre</button>
-        </div>        
+        </div>
     </div>
-
 
     <!-- Modal para cambiar la imagen del usuario -->
     <div id="imageModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <img id="modalImage" src="" alt="Imagen de usuario en modal">
+            <img id="modalImage" src="" alt="Imagen de usuario en modal" draggable="false">
             <div class="modal-buttons">
                 <input type="file" id="uploadImage" accept="image/*" style="display:none;">
                 <label for="uploadImage" id="uploadLabel">Seleccionar Imagen</label>
@@ -36,16 +37,25 @@
     </div>
 
 
-<!-- Modal para cambiar el nombre del usuario -->
-<div id="nameModal" class="modal">
-    <div class="modal-content">
-        <span class="close" id="closeNameModal">&times;</span>
-        <h2>Cambiar Nombre</h2>
-        <input type="text" id="newUsername" placeholder="Nuevo nombre de usuario">
-        <button id="saveNameButton">Guardar</button>
+    <!-- Modal para cambiar el nombre del usuario -->
+    <div id="nameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeNameModal">&times;</span>
+            <input type="text" id="newUsername" placeholder="Nombre">
+            <button id="saveNameButton">Guardar</button>
+        </div>
     </div>
-</div>
+
+    <footer>
+        <div class="footer-content">
+            <p>Dennis290699</p>
+            <a href="https://github.com/Dennis290699" target="_blank" draggable="false">
+                <img src="./assets/images/profile.jpeg" alt="GitHub" class="github-icon" title="Dennis290699" draggable="false">
+            </a>
+        </div>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,3 @@
-// JavaScript utilizando el DOM
 const userImage = document.querySelector(".user-image");
 const imageModal = document.getElementById("imageModal");
 const modalImage = document.getElementById("modalImage");
@@ -7,7 +6,16 @@ const uploadLabel = document.getElementById("uploadLabel");
 const uploadImage = document.getElementById("uploadImage");
 const saveButton = document.getElementById("saveButton");
 const changeImageButton = document.getElementById("changeImageButton");
+const changeNameButton = document.getElementById("changeNameButton");
+const nameModal = document.getElementById("nameModal");
+const closeNameModal = document.getElementById("closeNameModal");
+const newUsernameInput = document.getElementById("newUsername");
+const saveNameButton = document.getElementById("saveNameButton");
+const userNameElement = document.querySelector(".user-name");
 
+//--------------------------------------------------------------------------------------------------
+//                          EDICION DE LA IMAGEN DE PERFIL
+//--------------------------------------------------------------------------------------------------
 // Función para mostrar el modal con la imagen del usuario al hacer clic en "Cambiar Imagen"
 changeImageButton.addEventListener("click", () => {
     modalImage.src = userImage.src;
@@ -41,14 +49,9 @@ saveButton.addEventListener("click", () => {
     imageModal.style.display = "none";
 });
 
-
-const changeNameButton = document.getElementById("changeNameButton");
-const nameModal = document.getElementById("nameModal");
-const closeNameModal = document.getElementById("closeNameModal");
-const newUsernameInput = document.getElementById("newUsername");
-const saveNameButton = document.getElementById("saveNameButton");
-const userNameElement = document.querySelector(".user-name");
-
+//--------------------------------------------------------------------------------------------------
+//                          EDICION DEL NOMBRE DE USUARIO
+//--------------------------------------------------------------------------------------------------
 // Abre el modal para cambiar el nombre de usuario
 changeNameButton.addEventListener("click", () => {
     newUsernameInput.value = ""; // Limpia el campo de entrada de nombre de usuario

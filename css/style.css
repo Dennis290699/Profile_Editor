@@ -1,0 +1,157 @@
+/* Establece un fondo y colores de texto */
+body {
+    background-image: url('../assets/images/background.jpg');
+    background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex; /* Activa el modelo de caja flexible en el body */
+    justify-content: center; /* Centra horizontalmente el contenido del body */
+    align-items: center; /* Centra verticalmente el contenido del body */
+    min-height: 98vh;
+}
+
+.profile-grid {
+    max-width: 400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.533);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la celda que contiene la imagen del usuario */
+.user-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Estilos para la imagen del usuario */
+.user-image {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-image:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para los botones dentro del contenedor .user-info */
+.user-info button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #060606;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-info button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.user-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón "Cambiar Imagen" */
+#changeImageButton {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #030303;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#changeImageButton:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.user-image:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color de texto del footer */
+    text-align: center; /* Centra el contenido del footer */
+    padding: 20px 0; /* Espaciado interno en el footer */
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.079);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos para el texto "Desarrollado por Dennis290699" */
+footer p {
+    margin: 0;
+    font-size: 16px;
+    margin-right: 5px; /* Espaciado a la izquierda del texto */
+}
+
+/* Estilos para el ícono de GitHub */
+.github-icon {
+    width: 30px; /* Ancho del ícono de GitHub */
+    height: 30px; /* Altura del ícono de GitHub */
+    border-radius: 50%; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono */
+}
+
+.github-icon:hover {
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+
+    .user-image {
+        max-width: 150px; /* Limita el ancho máximo de la imagen de perfil */
+        height: auto;
+        margin: 0 auto; /* Centra la imagen horizontalmente */
+    }
+
+    .modal-content {
+        max-width: 75%; /* Ajusta el ancho máximo del contenido del modal */
+        margin: 10% auto; /* Alinea el modal verticalmente en la pantalla */
+        padding: 20px; /* Agrega un relleno interior para mayor espacio entre el contenido y el borde */
+    }
+
+    #modalImage {
+        max-width: 50%; /* Ajusta el ancho máximo de la imagen al 100% del modal */
+        height: auto;
+    }
+}
